@@ -1,0 +1,16 @@
+{
+    "name": "rezafikkri/php8",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Rezafikkri\\Php8\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "rezafikkri",
+            "email": "fikkri.reza@gmail.com"
+        }
+    ],
+    "require": {}
+}

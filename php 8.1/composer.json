@@ -1,0 +1,12 @@
+{
+    "name": "rezafikkri/php8.1",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "rezafikkri",
+            "email": "fikkri.reza@gmail.com"
+        }
+    ],
+    "require": {}
+}

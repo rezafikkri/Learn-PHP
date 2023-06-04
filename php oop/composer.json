@@ -1,0 +1,17 @@
+{
+    "name": "belajar/phpoop",
+    "description": "Latihan",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Belajar\\Phpoop\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "rezafikkri",
+            "email": "fikkri.reza@gmail.com"
+        }
+    ],
+    "require": {}
+}
