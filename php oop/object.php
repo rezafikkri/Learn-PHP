@@ -1,7 +1,7 @@
 <?php
 
-require_once("properties.php");
+require_once "properties.php";
 
-$reza = new Person();
+$reza = new \properties\Person();
 
 var_dump($reza);

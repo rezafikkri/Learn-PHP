@@ -1,5 +1,7 @@
 <?php
 
+namespace properties;
+
 class Person
 {
     var string $name;
