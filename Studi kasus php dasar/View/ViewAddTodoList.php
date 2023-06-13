@@ -6,12 +6,12 @@ require_once "BusinessLogic/AddTodoList.php";
 
 function viewAddTodoList()
 {
-    echo "Menambah Todo" . PHP_EOL;
+    echo "MENAMBAH TODO" . PHP_EOL;
 
     $todo = input("Todo (x untuk batal)");
 
     if ($todo == 'x') {
-        // batal
+        echo "Batal menambah todo" . PHP_EOL;
     } else {
         addTodoList($todo);
     }
