@@ -11,13 +11,13 @@ function viewRemoveTodoList()
     $pilihan = input("Nomor (x untuk batalkan)");
 
     if ($pilihan == 'x') {
-        echo "Batal menghapus todo";
+        echo "Batal menghapus todo" . PHP_EOL;
     } else {
         $success = removeTodoList($pilihan);
         if ($success) {
-            echo "Success Menghapus Todo Nomor $pilihan";
+            echo "Success Menghapus Todo Nomor $pilihan" . PHP_EOL;
         } else {
-            echo "Success Menghapus Todo Nomor $pilihan";
+            echo "Gagal Menghapus Todo Nomor $pilihan" . PHP_EOL;
         }
     }
 }
