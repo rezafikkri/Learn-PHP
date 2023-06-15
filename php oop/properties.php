@@ -4,6 +4,8 @@ namespace properties;
 
 class Person
 {
+    const AUTHOR = "Reza Sariful Fikri";
+
     var string $name;
     var ?string $address = null;
     var string $country = "Indonesia";
@@ -15,5 +17,10 @@ class Person
         } else {
             echo "Hello $name, my name is $this->name" . PHP_EOL;
         }
+    }
+
+    public function info()
+    {
+        echo "Author : " . self::AUTHOR . PHP_EOL;
     }
 }
