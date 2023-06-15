@@ -2,6 +2,9 @@
 
 require_once "properties.php";
 
-$reza = new \properties\Person();
+$person = new \properties\Person();
+$person->name = "Reza";
 
-var_dump($reza);
+var_dump($person);
+
+echo "Nama : $person->name";
