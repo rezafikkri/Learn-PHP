@@ -1,11 +1,16 @@
 <?php
 
 require_once "properties.php";
+require_once "data/Helper.php";
 
-$reza = new \properties\Person("Reza", "Indonesia");
+use properties\Person;
 
+$reza = new Person("Reza", "Indonesia");
 $reza->sayHello("Dian");
-echo "Program selesai" . PHP_EOL;
 
 $dea = new \properties\Programmer("Dea", "Indonesia");
 $dea->sayHello("Dian");
+
+\Helper\helpMe();
+
+echo \Helper\FULL_NAME . PHP_EOL;
