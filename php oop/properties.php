@@ -16,7 +16,7 @@ class Person
         $this->address = $address;
     }
 
-    public function sayHello(?string $name = null)
+    public function sayHello(?string $name = null): void
     {
         if (is_null($name)) {
             echo "Hello, my name is $this->name" . PHP_EOL;
@@ -25,8 +25,18 @@ class Person
         }
     }
 
-    public function info()
+    public function info(): void
     {
         echo "Author : " . self::AUTHOR . PHP_EOL;
     }
+
+/*     public function __destruct()
+    {
+        echo "Object person $this->name is Destroyed" . PHP_EOL;
+    } */
+}
+
+class Programmer extends Person
+{
+
 }

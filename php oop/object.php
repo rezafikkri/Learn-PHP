@@ -2,6 +2,10 @@
 
 require_once "properties.php";
 
-$person = new \properties\Person("Reza", "Indonesia");
+$reza = new \properties\Person("Reza", "Indonesia");
 
-$person->sayHello("Dian");
+$reza->sayHello("Dian");
+echo "Program selesai" . PHP_EOL;
+
+$dea = new \properties\Programmer("Dea", "Indonesia");
+$dea->sayHello("Dian");
