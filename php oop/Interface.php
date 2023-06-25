@@ -1,6 +1,6 @@
 <?php
 
-require_once "data/Human.php";
+require_once "data/Motor.php";
 
 use Data\CRF;
 
