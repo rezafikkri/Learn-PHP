@@ -1,6 +1,6 @@
 <?php
 
-use Helper\MathHelper;
+require_once "data/Manager.php";
 
 $arr = [
     "firstName" => "Reza Sariful",
@@ -9,13 +9,12 @@ $arr = [
 ];
 
 $obj = (object) $arr;
+var_dump($obj);
+echo "Nama saya $obj->firstName $obj->midleName $obj->lastName" . PHP_EOL;
 
-// echo "Nama saya $obj->firstName $obj->midleName $obj->lastName" . PHP_EOL;
-
-require_once "MathHelper.php";
-
-$objM = new MathHelper();
+$objM = new Manager("Reza");
 
 $arr2 = (array) $objM;
 $obj2 = (object) $arr2;
+var_dump($arr2);
 var_dump($obj2);
