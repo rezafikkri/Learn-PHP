@@ -1,15 +1,21 @@
 <?php
 
-require_once('Student.php');
+require_once('data/Student.php');
+
+use Data\Student;
 
 $student1 = new Student();
-$student1->id = '1';
-$student1->nama = 'Reza';
+$student1->name = 'Reza';
 $student1->value = 1;
 
-$student2 = new Student();
-$student2->id = '1';
-$student2->nama = 'Reza';
-$student2->value = 1;
+$student2 = $student1;
+
+$student3 = new Student();
+$student3->name = "Reza";
+$student3->value = 1;
 
 var_dump($student1 == $student2);
+var_dump($student1 === $student2);
+
+var_dump($student1 == $student3);
+var_dump($student1 === $student3);
