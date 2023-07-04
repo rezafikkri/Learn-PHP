@@ -17,3 +17,6 @@ $now->setTimezone(new DateTimeZone("Asia/Tokyo"));
 var_dump($now);
 
 echo $now->format("Y-m-d H:i:sa") . PHP_EOL;
+
+$date = DateTime::createFromFormat("Y-m-d H:i:s", "2022-10-10 10:10:10", new DateTimeZone("Asia/Jakarta"));
+var_dump($date);
