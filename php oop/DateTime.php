@@ -15,3 +15,5 @@ var_dump($dateTime);
 $now = new DateTime();
 $now->setTimezone(new DateTimeZone("Asia/Tokyo"));
 var_dump($now);
+
+echo $now->format("Y-m-d H:i:sa") . PHP_EOL;
