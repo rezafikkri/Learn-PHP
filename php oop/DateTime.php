@@ -11,3 +11,7 @@ $minusOneMonth = new DateInterval("P1M");
 $minusOneMonth->invert = 1;
 $dateTime->add($minusOneMonth);
 var_dump($dateTime);
+
+$now = new DateTime();
+$now->setTimezone(new DateTimeZone("Asia/Tokyo"));
+var_dump($now);
