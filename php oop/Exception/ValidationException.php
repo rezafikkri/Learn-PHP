@@ -2,5 +2,5 @@
 
 class ValidationException extends Exception
 {
-
+    
 }

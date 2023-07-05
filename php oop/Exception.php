@@ -1,19 +1,22 @@
 <?php
 
 require_once "Exception/ValidationException.php";
-require_once "helper/Validation.php";
 require_once "data/LoginRequest.php";
+require_once "helper/Validation.php";
 
 $loginRequest = new LoginRequest();
+$loginRequest->username = "reza";
+$loginRequest->password = "";
 
 try {
-    $loginRequest->username = "";
-    $loginRequest->password = ""; 
     validateLoginRequest($loginRequest);
-    echo "VALID";
+    echo "Valid" . PHP_EOL;
 } catch (Exception | ValidationException $e) {
-    echo "Error: " . $e->getMessage() . PHP_EOL;
-    var_dump($e->getTraceAsString());
+    echo "Error : {$e->getMessage()}" . PHP_EOL;
+
+    var_dump($e->getTrace());
+
+    echo $e->getTraceAsString() . PHP_EOL;
 } finally {
-    echo "Error tidak error tetap dipanggil" . PHP_EOL;
+    echo "Tetap akan berjalan" . PHP_EOL;
 }
