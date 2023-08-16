@@ -13,7 +13,7 @@ interface TodoListRepository
 
 class TodoListRepositoryImpl implements TodoListRepository
 {
-    private array $todoList = [];
+    public array $todoList = [];
 
     public function save(TodoList $todoList): void
     {
