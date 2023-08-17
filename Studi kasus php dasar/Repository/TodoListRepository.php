@@ -23,7 +23,18 @@ class TodoListRepositoryImpl implements TodoListRepository
 
     public function remove(int $number): bool
     {
-        
+        if ($number < 1 || $number > count($this->todoList)) {
+            return false;
+        }
+
+        $totalTodoList = count($this->todoList);
+        for ($i = $number; $i < $totalTodoList; $i++) {
+            $this->todoList[$i] = $this->todoList[$i + 1];
+        }
+
+        array_pop($this->todoList);
+
+        return true;
     }
 
     public function getAll(): array

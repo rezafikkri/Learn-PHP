@@ -37,5 +37,10 @@ class TodoListServiceImpl implements TodoListService
 
     public function removeTodoList(int $number): void
     {
+        if ($this->todoListRepository->remove($number)) {
+            echo "Success menghapus todolist" . PHP_EOL;
+        } else {
+            echo "Gagal menghapus todolist" . PHP_EOL;
+        }
     }
 }
