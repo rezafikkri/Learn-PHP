@@ -2,6 +2,8 @@
 
 namespace Service;
 
+require_once __DIR__ . "/../Entity/TodoList.php";
+
 use Entity\TodoList;
 use Repository\TodoListRepository;
 

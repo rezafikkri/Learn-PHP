@@ -2,6 +2,8 @@
 
 namespace View;
 
+require_once __DIR__ . "/../Helper/InputHelper.php";
+
 use Helper\InputHelper;
 use Service\TodoListService;
 
