@@ -11,4 +11,5 @@ foreach($sth as $u) {
     var_dump($u);
 }
 
+$sth = null;
 $dbh = null;
