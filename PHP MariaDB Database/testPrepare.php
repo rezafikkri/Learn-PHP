@@ -1,23 +1,22 @@
 <?php
 
-include './getConnection.php';
+include __DIR__ . '/getConnection.php';
 
 $dbh = getConnection();
 
 $username = "admin";
 $password = "admin";
 
-$sql = 'SELECT * FROM admin WHERE username = :username AND password = :password';
+$sql = 'DELETE FROM admin WHERE username = :username AND password = :password';
 $sth = $dbh->prepare($sql);
 $sth->execute([ ':username' => $username, ':password' => $password ]);
 
-$user = $sth->fetch(PDO::FETCH_ASSOC);
+$stmt = $dbh->prepare("SELECT * FROM admin WHERE username != :username");
+$stmt->execute([':username' => 'admin']);
 
-if (empty($user)) {
-    echo "Login gagal";
-} else {
-    echo "Login success . $user[username]";
-}
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
+var_dump($user);
+echo $user['username'];
 
 $sth = null;
 $dbh = null;
