@@ -25,8 +25,8 @@ class TodoListServiceImpl implements TodoListService
     {
         echo "TODOLIST" . PHP_EOL;
 
-        foreach ($this->todoListRepository->getAll() as $key => $val) {
-            echo "$key. {$val->getTodo()}" . PHP_EOL;
+        foreach ($this->todoListRepository->getAll() as $val) {
+            echo "{$val->getId()}. {$val->getTodo()}" . PHP_EOL;
         } 
     }
 
