@@ -29,20 +29,25 @@ class TodoListRepositoryImpl implements TodoListRepository
         $stmt->execute([":todo" => $todoList->getTodo()]);
     }
 
-    public function remove(int $number): bool
+    public function remove(int $id): bool
     {
-        if ($number < 1 || $number > count($this->todoList)) {
-            return false;
-        }
+        // if ($number < 1 || $number > count($this->todoList)) {
+        //     return false;
+        // }
 
-        $totalTodoList = count($this->todoList);
-        for ($i = $number; $i < $totalTodoList; $i++) {
-            $this->todoList[$i] = $this->todoList[$i + 1];
-        }
+        // $totalTodoList = count($this->todoList);
+        // for ($i = $number; $i < $totalTodoList; $i++) {
+        //     $this->todoList[$i] = $this->todoList[$i + 1];
+        // }
 
-        array_pop($this->todoList);
+        // array_pop($this->todoList);
 
-        return true;
+        // return true;
+        
+        $sql = "DELETE FROM todolist WHERE id = :id";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute([":id" => $id]);
+        return $stmt->rowCount();
     }
 
     public function getAll(): array
