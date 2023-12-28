@@ -63,12 +63,7 @@ class TodoListView
         if ($pilihan == 'x') {
             echo "Batal menghapus todo" . PHP_EOL;
         } else {
-            $success = $this->todoListService->removeTodoList($pilihan);
-            if ($success) {
-                echo "Success Menghapus Todo Nomor $pilihan" . PHP_EOL;
-            } else {
-                echo "Gagal Menghapus Todo Nomor $pilihan" . PHP_EOL;
-            }
+            $this->todoListService->removeTodoList($pilihan); 
         }
     }
 }
