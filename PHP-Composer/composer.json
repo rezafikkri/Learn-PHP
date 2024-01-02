@@ -1,0 +1,13 @@
+{
+    "name": "rezafikkri/belajar-php-composer",
+    "description": "Belajar php composer",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "rezafikkri",
+            "email": "fikkri.reza@gmail.com"
+        }
+    ],
+    "require": {}
+}
