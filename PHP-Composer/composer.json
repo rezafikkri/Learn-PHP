@@ -3,6 +3,9 @@
   "description": "Belajar php composer",
   "type": "project",
   "license": "MIT",
+  "scripts": {
+    "dev": "php -S localhost:8080"
+  },
   "authors": [
     {
       "name": "rezafikkri",
