@@ -18,11 +18,5 @@
     "psr-4": {
       "RezaFikkri\\": "src/"
     }
-  },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/rezafikkri/php-composer-hello"
-    }
-  ]
+  }
 }
