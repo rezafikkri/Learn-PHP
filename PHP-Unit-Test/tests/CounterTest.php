@@ -7,16 +7,15 @@ use RezaFikkri\PHPUnitTest\Counter;
 
 class CounterTest extends TestCase
 {
-    public function testCounter(): void
+    /**
+     * @test
+     */
+    public function increment(): void
     {
         $counter = new Counter();
         $counter->increment();
         $counter->increment();
-        echo $counter->getCounter() . PHP_EOL;
-    }
 
-    public function testOther(): void
-    {
-        echo "Other";
+        $this->assertEquals(2, $counter->getCounter());
     }
 }

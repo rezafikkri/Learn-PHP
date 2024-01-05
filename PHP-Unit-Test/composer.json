@@ -3,6 +3,9 @@
   "description": "Belajar PHPUnit",
   "type": "project",
   "license": "MIT",
+  "scripts": {
+    "test": "vendor/bin/phpunit tests/"
+  },
   "authors": [
     {
       "name": "rezafikkri",
