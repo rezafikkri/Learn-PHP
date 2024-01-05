@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4361c640c82dcfa50813ec4804225879",
+    "content-hash": "0816bca36afa41db1fbae96039c72ecd",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -156,6 +156,45 @@
                 "source": "https://github.com/php-fig/log/tree/3.0.0"
             },
             "time": "2021-07-14T16:46:02+00:00"
+        },
+        {
+            "name": "rezafikkri/php-composer-hello",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rezafikkri/php-composer-hello.git",
+                "reference": "a59dd8b4d0a783fcb72921dd62fbfb0844adadcf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rezafikkri/php-composer-hello/zipball/a59dd8b4d0a783fcb72921dd62fbfb0844adadcf",
+                "reference": "a59dd8b4d0a783fcb72921dd62fbfb0844adadcf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RezaFikkri\\Belajar\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "rezafikkri",
+                    "email": "fikkri.reza@gmail.com"
+                }
+            ],
+            "description": "Library composer hello",
+            "support": {
+                "source": "https://github.com/rezafikkri/php-composer-hello/tree/v1.0.0",
+                "issues": "https://github.com/rezafikkri/php-composer-hello/issues"
+            },
+            "time": "2024-01-05T03:33:33+00:00"
         }
     ],
     "packages-dev": [],
@@ -164,7 +203,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=8.2"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }

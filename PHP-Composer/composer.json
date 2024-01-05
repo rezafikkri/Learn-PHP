@@ -10,11 +10,19 @@
     }
   ],
   "require": {
-    "monolog/monolog": "^3.5"
+    "php": ">=8.2",
+    "monolog/monolog": "^3.5",
+    "rezafikkri/php-composer-hello": "1.0"
   },
   "autoload": {
     "psr-4": {
-      "RezaFikkri\\" : "src/"
+      "RezaFikkri\\": "src/"
     }
-  }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/rezafikkri/php-composer-hello"
+    }
+  ]
 }
