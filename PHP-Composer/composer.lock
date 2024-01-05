@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0816bca36afa41db1fbae96039c72ecd",
+    "content-hash": "2b2fca92e3665176ddefdf0776fdbcb8",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -159,16 +159,16 @@
         },
         {
             "name": "rezafikkri/php-composer-hello",
-            "version": "v1.0.0",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rezafikkri/php-composer-hello.git",
-                "reference": "a59dd8b4d0a783fcb72921dd62fbfb0844adadcf"
+                "reference": "d9802f3d589af0039f7b5911ae390a6430723b2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rezafikkri/php-composer-hello/zipball/a59dd8b4d0a783fcb72921dd62fbfb0844adadcf",
-                "reference": "a59dd8b4d0a783fcb72921dd62fbfb0844adadcf",
+                "url": "https://api.github.com/repos/rezafikkri/php-composer-hello/zipball/d9802f3d589af0039f7b5911ae390a6430723b2d",
+                "reference": "d9802f3d589af0039f7b5911ae390a6430723b2d",
                 "shasum": ""
             },
             "require": {
@@ -191,10 +191,10 @@
             ],
             "description": "Library composer hello",
             "support": {
-                "source": "https://github.com/rezafikkri/php-composer-hello/tree/v1.0.0",
+                "source": "https://github.com/rezafikkri/php-composer-hello/tree/v2.0.0",
                 "issues": "https://github.com/rezafikkri/php-composer-hello/issues"
             },
-            "time": "2024-01-05T03:33:33+00:00"
+            "time": "2024-01-05T08:40:18+00:00"
         }
     ],
     "packages-dev": [],
