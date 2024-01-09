@@ -15,4 +15,9 @@ class Person
         if ($name === null) throw new Exception("Name is null");
         return "Hello $name, my name is $this->name";
     }
+
+    public function sayGoodBye(?string $name): void
+    {
+        echo "Goodbye $name" . PHP_EOL;
+    }
 }
