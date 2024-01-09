@@ -8,23 +8,35 @@ use RezaFikkri\PHPUnitTest\Person;
 
 class PersonTest extends TestCase
 {
+    private Person $person;
+
+    protected function setUp(): void
+    {
+        // $this->person = new Person("Reza");
+    }
+    
+    /**
+     * @before
+     */
+    protected function createPerson(): void
+    {
+        $this->person = new Person("Reza");
+    }
+
     public function testSuccess(): void
     {
-        $person = new Person("Reza");
-        $this->assertEquals("Hello Adel, my name is Reza", $person->sayHello("Adel"));
+        $this->assertEquals("Hello Adel, my name is Reza", $this->person->sayHello("Adel"));
     }
 
     public function testException(): void
     {
-        $person = new Person("Reza");
         $this->expectException(Exception::class);
-        $person->sayHello(null);
+        $this->person->sayHello(null);
     }
 
     public function testGoodbyeSuccess(): void
     {
-        $person = new Person("Reza");
         $this->expectOutputString("Goodbye Adel" . PHP_EOL);
-        $person->sayGoodBye("Adel");
+        $this->person->sayGoodBye("Adel");
     }
 }

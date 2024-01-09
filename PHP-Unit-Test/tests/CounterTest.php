@@ -7,25 +7,31 @@ use RezaFikkri\PHPUnitTest\Counter;
 
 class CounterTest extends TestCase
 {
+    private Counter $counter;
+
+    protected function setUp(): void
+    {
+        $this->counter = new Counter();
+        echo "Membuat counter" . PHP_EOL;
+    }
+
     /**
      * @test
      */
     public function increment(): void
     {
-        $counter = new Counter();
-        $counter->increment();
-        $counter->increment();
+        $this->counter->increment();
+        $this->counter->increment();
 
-        $this->assertEquals(2, $counter->getCounter());
+        $this->assertEquals(2, $this->counter->getCounter());
     }
 
     public function testFirst(): Counter
     {
-        $counter = new Counter();
-        $counter->increment();
-        $this->assertEquals(1, $counter->getCounter());
+        $this->counter->increment();
+        $this->assertEquals(1, $this->counter->getCounter());
 
-        return $counter;
+        return $this->counter;
     }
     
     /**
@@ -33,7 +39,21 @@ class CounterTest extends TestCase
      */
     public function testSecond(Counter $counter): void
     {
+        echo "test second" . PHP_EOL;
         $counter->increment();
         $this->assertEquals(2, $counter->getCounter());
+    }
+
+    protected function tearDown(): void
+    {
+        echo "Tear down" . PHP_EOL;
+    }
+
+    /**
+     * @after
+     */
+    protected function after(): void
+    {
+        echo "After" . PHP_EOL;
     }
 }
