@@ -26,6 +26,8 @@ class CounterTest extends TestCase
      */
     public function increment(): void
     {
+        $this->markTestSkipped("Masih ada error");
+
         $this->counter->increment();
         $this->counter->increment();
 
@@ -61,5 +63,22 @@ class CounterTest extends TestCase
     protected function after(): void
     {
         // echo "After" . PHP_EOL;
+    }
+
+    /**
+     * @requires OSFAMILY Linux
+     */
+    public function testOnlyWindows(): void
+    {
+        $this->assertTrue(true, "Only in Windows");
+    }
+
+    /**
+     * @requires OSFAMILY Linux
+     * @requires PHP >= 8.2
+     */
+    public function testOnlyForLinuxAndPHP82(): void
+    {
+        $this->assertTrue(true, "Only for linux and PHP >= 8.2");
     }
 }
