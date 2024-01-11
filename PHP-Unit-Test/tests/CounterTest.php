@@ -12,7 +12,13 @@ class CounterTest extends TestCase
     protected function setUp(): void
     {
         $this->counter = new Counter();
-        echo "Membuat counter" . PHP_EOL;
+        // echo "Membuat counter" . PHP_EOL;
+    }
+
+    public function testIncrement(): void
+    {
+        $this->markTestIncomplete("TODO not complete");
+        $this->assertEquals(0, $this->counter->getCounter());
     }
 
     /**
@@ -39,14 +45,14 @@ class CounterTest extends TestCase
      */
     public function testSecond(Counter $counter): void
     {
-        echo "test second" . PHP_EOL;
+        // echo "test second" . PHP_EOL;
         $counter->increment();
         $this->assertEquals(2, $counter->getCounter());
     }
 
     protected function tearDown(): void
     {
-        echo "Tear down" . PHP_EOL;
+        // echo "Tear down" . PHP_EOL;
     }
 
     /**
@@ -54,6 +60,6 @@ class CounterTest extends TestCase
      */
     protected function after(): void
     {
-        echo "After" . PHP_EOL;
+        // echo "After" . PHP_EOL;
     }
 }
