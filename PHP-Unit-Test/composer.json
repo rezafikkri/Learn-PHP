@@ -4,7 +4,8 @@
   "type": "project",
   "license": "MIT",
   "scripts": {
-    "test": "vendor/bin/phpunit tests/ --filter"
+    "test": "phpunit --configuration phpunit.xml --filter",
+    "test-all": "phpunit --configuration phpunit.xml"
   },
   "authors": [
     {
