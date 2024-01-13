@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "test": "phpunit --configuration phpunit.xml --filter",
-    "test-all": "phpunit --configuration phpunit.xml"
+    "test:all": "phpunit --configuration phpunit.xml --testsuite all",
+    "test:product": "phpunit --configuration phpunit.xml --testsuite product",
+    "test:counter": "phpunit --configuration phpunit.xml --testsuite counter"
   },
   "authors": [
     {
