@@ -8,14 +8,14 @@ use RezaFikkri\PHPUnitTest\Product;
 use RezaFikkri\PHPUnitTest\ProductRepository;
 use RezaFikkri\PHPUnitTest\ProductService;
 
-class ProductServiceTest extends TestCase
+class ProductServiceMockTest extends TestCase
 {
     private ProductRepository $repository;
     private ProductService $service;
 
     public function setUp(): void
     {
-        $this->repository = $this->createStub(ProductRepository::class);
+        $this->repository = $this->createMock(ProductRepository::class);
         $this->service = new ProductService($this->repository);
     }
 
@@ -95,7 +95,14 @@ class ProductServiceTest extends TestCase
         $product = new Product();
         $product->setId("1");
 
-        $this->repository->method("findById")->willReturn($product);
+        $this->repository->expects($this->once())
+            ->method("delete")
+            ->with($this->equalTo($product));
+
+        $this->repository->expects($this->once())
+            ->method("findById")
+            ->willReturn($product)            
+            ->with($this->equalTo("1"));
 
         $this->service->delete("1");
         $this->assertTrue(true, "Success delete");
@@ -103,9 +110,26 @@ class ProductServiceTest extends TestCase
 
     public function testDeleteFailed(): void
     {
+        $this->repository->expects($this->never())
+            ->method("delete");
+
         $this->expectException(Exception::class);
-        $this->repository->method("findById")->willReturn(null);
+        $this->repository->expects($this->once())
+            ->method("findById")->willReturn(null)
+            ->with($this->equalTo("1"));
 
         $this->service->delete("1");
+    }
+
+    public function testMock(): void
+    {
+        $product = new Product();
+        $product->setId("1");
+
+        $this->repository->expects($this->once())
+            ->method("findById")->willReturn($product);
+
+        $result = $this->repository->findById("1");
+        $this->assertSame($product, $result);
     }
 }
