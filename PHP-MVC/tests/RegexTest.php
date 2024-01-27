@@ -12,7 +12,7 @@ class RegexTest extends TestCase
         $pattern = '#^/products/([\d\w]*)/categories/([\d\w]*)$#';
         $result = preg_match($pattern, $path, $matches);
 
-        $this->assertTrue($result);
+        $this->assertEquals(1, $result);
 
         var_dump($matches);
     }

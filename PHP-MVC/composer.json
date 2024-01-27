@@ -3,6 +3,9 @@
   "description": "PHP MVC",
   "type": "project",
   "license": "MIT",
+  "scripts": {
+    "test": "phpunit --configuration phpunit.xml --filter"
+  },
   "authors": [
     {
       "name": "rezafikkri",
