@@ -41,7 +41,10 @@ class Router
 
         foreach (static::$routes as $route) {
             if ($path == $route['path'] && $method == $route['method']) {
-                echo "Controller: " . $route['controller'] . ", Method: " . $route['function'];
+                $controller = new $route['controller']();
+                $method = $route['function'];
+                $controller->$method();
+
                 return;
             }
         }
