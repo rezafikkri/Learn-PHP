@@ -20,13 +20,15 @@ class Router
         string $method,
         string $path,
         string $controller,
-        string $function
+        string $function,
+        array $middleware = []
     ): void {
         static::$routes[] = [
             'method' => $method,
             'path' => $path,
             'controller' => $controller,
-            'function' => $function
+            'function' => $function,
+            'middleware' => $middleware
         ];
     }
 
@@ -42,6 +44,13 @@ class Router
         foreach (static::$routes as $route) {
             $pattern = '#^' . $route['path'] . '$#';
             if (preg_match($pattern, $path, $matches) && $method == $route['method']) {
+                // call middleware
+                foreach ($route['middleware'] as $middleware) {
+                    $instance = new $middleware;
+                    $instance->before();
+                }
+
+                // call controller
                 $controller = new $route['controller']();
                 $method = $route['function'];
 
