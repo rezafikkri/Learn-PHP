@@ -2,15 +2,19 @@
 
 namespace RezaFikkri\PHPMVC\Controller;
 
+use RezaFikkri\PHPMVC\Core\View;
+
 class HomeController
 {
     public function index(): void
     {
         $model = [
             'title' => 'Belajar PHP MVC',
-            'content' => 'Selamat belajar PHP MVC'
+            'content' => 'Selamat belajar PHP MVC',
+            'todo' => ['ha' => 'hahaha']
         ];
-        echo "HomeController::index()";
+
+        View::render('Home/index', $model);
     }
 
     public function hello(): void
