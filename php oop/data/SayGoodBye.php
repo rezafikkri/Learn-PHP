@@ -43,10 +43,20 @@ trait All
 
 class Person
 {
-    use All;
+    use All {
+        morning as protected;
+    }
 
     public function run(): void
     {
         echo "Person $this->name is running" . PHP_EOL;
+    }
+}
+
+class Reza extends Person
+{
+    public function morningInReza()
+    {
+        return $this->morning();
     }
 }

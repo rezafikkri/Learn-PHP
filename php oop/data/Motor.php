@@ -40,3 +40,26 @@ class CRF implements Motor, isMaintenance
         return "Honda";
     }
 }
+
+class NinjaRR implements Motor, isMaintenance
+{
+    public function drive(): void
+    {
+        echo "Ninja RR drive" . PHP_EOL;
+    }
+
+    public function getTire(): int
+    {
+        return 2;
+    }
+
+    public function isMaintenance(): bool
+    {
+        return true;
+    }
+
+    public function getBrand(): string
+    {
+        return "Ninja" . PHP_EOL;
+    }
+}
