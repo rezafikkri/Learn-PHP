@@ -5,7 +5,7 @@ function hello(int $age, string $name = "World"): string
     return "Hallo $name, my $age years old" . PHP_EOL;
 }
 
-echo hello(name: "Reza", age: 22);
+echo hello(name: "Reza", age: 23);
 echo hello(23, name: "Dea");
 echo hello("25");
 
@@ -20,3 +20,4 @@ function sumAll(int ...$values)
 
 $arr = [2, 4, 10];
 echo sumAll(...$arr) . PHP_EOL;
+echo sumAll(4, 5, 6) . PHP_EOL;
