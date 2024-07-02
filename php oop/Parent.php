@@ -8,3 +8,4 @@ echo $shape->getCorner() . PHP_EOL;
 $rectangle = new Rectangle;
 echo $rectangle->getCorner() . PHP_EOL;
 echo $rectangle->getParentCorner() . PHP_EOL;
+echo $rectangle->type . PHP_EOL;

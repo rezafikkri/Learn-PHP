@@ -2,6 +2,8 @@
 
 class Shape
 {
+    protected string $type = "Segitiga";
+
     public function getCorner()
     {
         return 0;
@@ -10,6 +12,8 @@ class Shape
 
 class Rectangle extends Shape
 {
+    public string $type = 'Rectangle';
+
     public function getCorner()
     {
         return 4;   
