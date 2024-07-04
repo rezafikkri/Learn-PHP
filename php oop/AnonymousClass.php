@@ -7,7 +7,7 @@ interface HelloWorld
     public function helloWorld(): void;
 }
 
-$sampleHelloWorld = new class("Reza") implements HelloWorld {
+$sampleHelloWorld = new class("Reza Sariful Fikri") implements HelloWorld {
     public function __construct(
         public string $name,
     ) {

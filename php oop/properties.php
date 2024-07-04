@@ -38,5 +38,6 @@ class Person
 
 class Programmer extends Person
 {
-
+    // Override class constant
+    // const AUTHOR = 'Programmer';
 }
