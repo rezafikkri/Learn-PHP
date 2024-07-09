@@ -13,5 +13,14 @@ class MathHelper
             $total += $n;
         }
         return $total;
+
+        // This is will be error
+        // $this->devide();
+    }
+
+    public function divide(): int
+    {
+        // This is not error
+        return static::sum(2, 4, 2);
     }
 }
