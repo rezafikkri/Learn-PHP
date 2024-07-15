@@ -9,12 +9,18 @@ class Data implements IteratorAggregate
 
     public function getIterator(): Iterator
     {
-        return new ArrayIterator([
-            "first" => $this->first,
-            "second" => $this->second,
-            "third" => $this->third,
-            "forth" => $this->forth,
-        ]);
+        // return new ArrayIterator([
+        //     "first" => $this->first,
+        //     "second" => $this->second,
+        //     "third" => $this->third,
+        //     "forth" => $this->forth,
+        // ]);
+
+        // Using generator
+        yield "first" => $this->first;
+        yield "second"=> $this->second;
+        yield "third" => $this->third;
+        yield "forth" => $this->forth;
     } 
 }
 

@@ -24,7 +24,7 @@ function getGanjil($max): Iterator
 
 var_dump(getGanjil(10));
 
-foreach (getGanjil(1) as $value)
+foreach (getGanjil(10) as $value)
 {
     echo "Ganjil: $value" . PHP_EOL;
 }
