@@ -6,7 +6,7 @@ class Student
 {
     public string $name;
     public int $age = 22;
-    public int $value;
+    public int|string $value;
     private string $sample;
 
     public function setSample(string $sample): void
