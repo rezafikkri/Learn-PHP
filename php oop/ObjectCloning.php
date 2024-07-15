@@ -12,4 +12,5 @@ $student1->setSample("XXX");
 
 $student2 = clone $student1;
 
+var_dump($student1);
 var_dump($student2);
