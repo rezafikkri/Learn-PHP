@@ -9,7 +9,11 @@ abstract class Animal
     public string $name;
 
     abstract public function run(): void;
-    abstract public function eat(AnimalFood $animalFood): void;
+
+    public function eat(AnimalFood $food): void
+    {
+        echo "Cat $this->name is eating " . get_class($food) . PHP_EOL;
+    }
 }
 
 class Cat extends Animal
@@ -17,12 +21,7 @@ class Cat extends Animal
     public function run(): void
     {
         echo "Cat $this->name is running" . PHP_EOL;
-    }
-
-    public function eat(AnimalFood $animalFood): void
-    {
-        echo "Cat is eating" . PHP_EOL;
-    }
+    } 
 }
 
 class Dog extends Animal
@@ -32,8 +31,8 @@ class Dog extends Animal
         echo "Dog $this->name is running" . PHP_EOL;
     }
 
-    public function eat(Food $animalFood): void
+    public function eat(Food $food): void
     {
-        echo "Dog is eating" . PHP_EOL;
+        echo "Dog $this->name is eating " . get_class($food) . PHP_EOL;
     }
 }
