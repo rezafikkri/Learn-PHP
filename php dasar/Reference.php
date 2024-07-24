@@ -9,12 +9,12 @@ $otherName = "Dea";
 echo $name . PHP_EOL;
 
 // Passing by reference
-function increment(int &$val)
+function increment(?int &$val)
 {
     $val++;
 }
 
-$counter = 1;
+// $counter = 1;
 increment($counter);
 echo $counter . PHP_EOL;
 
