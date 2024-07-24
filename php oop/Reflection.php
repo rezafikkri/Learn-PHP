@@ -8,5 +8,16 @@ $request = new LoginRequest();
 // ValidationUtil::validate($request);
 
 $request->username = "reza";
-$request->password = null;
+$request->password = "reza";
 ValidationUtil::validateReflection($request);
+
+class RegisterUserRequest
+{
+    public ?string $name;
+    public ?string $email;
+    public ?string $address;
+}
+
+$register = new RegisterUserRequest();
+
+ValidationUtil::validateReflection($register);
