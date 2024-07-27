@@ -4,12 +4,13 @@ namespace PHP8;
 
 class Example
 {
-    public string $data;
+    public string|int|bool $data;
 }
 
 $example = new Example;
 $example->data = 12;
-$example->data = false;
+// $example->data = false;
+var_dump($example);
 
 function sample(string|array|bool $data): string|array|false
 {
@@ -22,6 +23,6 @@ function sample(string|array|bool $data): string|array|false
     }
 }
 
-var_dump(sample(12));
-var_dump(sample([]));
-var_dump(sample(false));
+// var_dump(sample(12));
+// var_dump(sample([]));
+// var_dump(sample(false));
