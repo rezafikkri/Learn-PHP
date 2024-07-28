@@ -2,19 +2,21 @@
 
 namespace PHP8;
 
+class Customer
+{
+    public function getAddress(): ?Address
+    {
+        return null;
+    }
+}
+
 class Address
 {
-    public ?string $country;
+    public function getCountry(): string
+    {
+
+    }
 }
 
-class User
-{
-    public ?Address $address;
-}
-
-function getCountry(?User $user): ?string
-{
-    return $user?->address?->country;
-}
-
-echo getCountry(null);
+$country = (new Customer())->getAddress()?->getCountry();
+var_dump($country);
