@@ -7,4 +7,4 @@ function katakanHalo(string $first, string $middle = "", string $last = ""): voi
     echo "Hello $first $middle $last" . PHP_EOL;
 }
 
-katakanHalo(last: "Fikri", first: "Reza");
+katakanHalo(last: "Fikri", first: "Reza", "Sariful");
