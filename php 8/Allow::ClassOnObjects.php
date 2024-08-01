@@ -1,5 +1,7 @@
 <?php
 
+namespace PHP8;
+
 class Login
 {
 
