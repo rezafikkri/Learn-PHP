@@ -3,7 +3,8 @@
 /**
  * Menambah todo ke list
  */
-function addTodoList()
+function addTodoList(string $todo)
 {
-
+    global $todoList;
+    $todoList[] = $todo;
 }
