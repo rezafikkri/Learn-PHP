@@ -23,10 +23,28 @@ function testAddTodoList(): void
 {
     $todoListRepository = new TodoListRepositoryImpl;
     $todoListService = new TodoListServiceImpl($todoListRepository);
-    $todoListService->saveTodoList('Belajar PHP Dasar');
-    $todoListService->saveTodoList('Belajar PHP Dasar');
+    $todoListService->addTodoList('Belajar PHP Dasar');
+    $todoListService->addTodoList('Belajar PHP Dasar');
 
     $todoListService->showTodoList();
 }
 
-testAddTodoList();
+function testRemoveTodoList(): void
+{
+    $todoListRepository = new TodoListRepositoryImpl;
+    $todoListService = new TodoListServiceImpl($todoListRepository);
+    $todoListService->addTodoList('Belajar PHP Dasar');
+    $todoListService->addTodoList('Belajar PHP OOP');
+    $todoListService->addTodoList('Belajar PHP Database');
+    $todoListService->addTodoList('Belajar PHP MVC');
+
+    $todoListService->showTodoList();
+
+    $todoListService->removeTodoList(3);
+    $todoListService->showTodoList();
+
+    $todoListService->removeTodoList(6);
+    $todoListService->showTodoList();
+}
+
+testRemoveTodoList();

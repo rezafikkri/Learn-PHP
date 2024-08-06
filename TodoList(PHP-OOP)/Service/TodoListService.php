@@ -8,8 +8,8 @@ use PHPOOP\Repository\TodoListRepository;
 interface TodoListService
 {
     public function showTodoList(): void;
-    public function saveTodoList(string $todo): void;
-    public function removeTodoList(int $number): bool;
+    public function addTodoList(string $todo): void;
+    public function removeTodoList(int $number): void;
 }
 
 class TodoListServiceImpl implements TodoListService
@@ -29,7 +29,7 @@ class TodoListServiceImpl implements TodoListService
         }
     }
 
-    public function saveTodoList(string $todo): void
+    public function addTodoList(string $todo): void
     {
         $todoList = new TodoList($todo);
         $this->todoListRepository->save($todoList);
@@ -37,8 +37,12 @@ class TodoListServiceImpl implements TodoListService
         echo 'Sukses menambah TODOLIST' . PHP_EOL;        
     }
 
-    public function removeTodoList(int $number): bool
+    public function removeTodoList(int $number): void
     {
-        
+        if ($this->todoListRepository->remove($number)) {
+            echo 'Sukses menghapus TODOLIST' . PHP_EOL;
+        } else {
+            echo 'Gagal menghapus TODOLIST ' . $number . PHP_EOL;
+        }
     }
 }
