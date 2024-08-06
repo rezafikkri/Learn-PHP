@@ -13,7 +13,7 @@ interface TodoListRepository
 
 class TodoListRepositoryImpl implements TodoListRepository
 {
-    private $todoLists = [];
+    public $todoLists = [];
 
     public function findAll(): array
     {
