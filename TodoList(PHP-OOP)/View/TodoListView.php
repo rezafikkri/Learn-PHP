@@ -45,6 +45,15 @@ class TodoListView
 
     public function addTodoList(): void
     {
+        echo 'MENAMBAH TODO.' . PHP_EOL;
+
+        $todo = InputHelper::input('Todo (x untuk batal)');
+
+        if ($todo != 'x') {
+            $this->todoListService->addTodoList($todo);
+        } else {
+            echo 'Batal menambah todo.' . PHP_EOL;
+        }
 
     }
 
