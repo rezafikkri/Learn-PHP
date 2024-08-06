@@ -59,6 +59,15 @@ class TodoListView
 
     public function removeTodoList(): void
     {
+        echo 'MENGHAPUS TODOLIST' . PHP_EOL;
+
+        $number = InputHelper::input('Number (x untuk batal)');
+
+        if ($number != 'x') {
+            $this->todoListService->removeTodoList($number);
+        } else {
+            echo 'Batal menghapus todo.' . PHP_EOL;
+        }
 
     }
 }
