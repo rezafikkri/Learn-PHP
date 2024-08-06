@@ -13,7 +13,7 @@ interface TodoListRepository
 
 class TodoListRepositoryImpl implements TodoListRepository
 {
-    public $todoLists = [];
+    private $todoLists = [];
 
     public function findAll(): array
     {
@@ -22,7 +22,7 @@ class TodoListRepositoryImpl implements TodoListRepository
 
     public function save(TodoList $todoList): void
     {
-        
+        $this->todoLists[] = $todoList;
     }
 
     public function remove(int $number): bool
