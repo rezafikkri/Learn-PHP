@@ -4,7 +4,7 @@ include 'getConnection.php';
 
 $dbh = getConnection();
 
-$username = $dbh->quote("admin'; #");
+$username = $dbh->quote("rezafikkri'; #");
 $password = $dbh->quote("admin");
 $sql = "SELECT * FROM admin WHERE username = $username AND password = $password";
 
