@@ -8,6 +8,7 @@ $username = "admin";
 $password = "admin";
 
 $sql = 'DELETE FROM admin WHERE username = :username AND password = :password';
+
 $sth = $dbh->prepare($sql);
 $sth->execute([ ':username' => $username, ':password' => $password ]);
 
