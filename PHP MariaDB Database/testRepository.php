@@ -1,8 +1,8 @@
 <?php
 
-require_once __DIR__ . "/Model/Comment.php";
-require_once __DIR__ . "/Repository/CommentRepository.php";
-require_once __DIR__ . "/getConnection.php";
+require_once __DIR__ . '/Model/Comment.php';
+require_once __DIR__ . '/Repository/CommentRepository.php';
+require_once __DIR__ . '/getConnection.php';
 
 use Model\Comment;
 use Repository\CommentRepositoryImpl;
@@ -10,9 +10,9 @@ use Repository\CommentRepositoryImpl;
 $connection = getConnection();
 
 $repository = new CommentRepositoryImpl($connection);
-// $comment = new Comment(email: "repo@tes.com", comment: "hai");
+// $comment = new Comment(email: 'repo@tes.com', comment: 'hai');
 // $newComment = $repository->insert($comment);
-// var_dump($comment);
+// var_dump($newComment);
 
 $comment = $repository->findAll();
 
