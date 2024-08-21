@@ -2,6 +2,7 @@
 
 namespace PHPOOP\Repository;
 
+use PDO;
 use PHPOOP\Entity\TodoList;
 
 interface TodoListRepository
@@ -15,6 +16,11 @@ class TodoListRepositoryImpl implements TodoListRepository
 {
     private $todoLists = [];
 
+    public function __construct(private PDO $dbh)
+    {
+        
+    }
+
     public function findAll(): array
     {
         return $this->todoLists;
@@ -22,7 +28,9 @@ class TodoListRepositoryImpl implements TodoListRepository
 
     public function save(TodoList $todoList): void
     {
-        $this->todoLists[] = $todoList;
+        $sql = 'INSERT INTO todolist(todo) VALUES(:todo)';
+        $stmt = $this->dbh->prepare($sql);
+        $stmt->execute([':todo' => $todoList->getTodo()]);
     }
 
     public function remove(int $number): bool
