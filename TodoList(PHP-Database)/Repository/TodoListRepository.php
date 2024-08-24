@@ -33,12 +33,12 @@ class TodoListRepositoryImpl implements TodoListRepository
         $stmt->execute([':todo' => $todoList->getTodo()]);
     }
 
-    public function remove(int $number): bool
+    public function remove(int $id): bool
     {
-        if ($number > count($this->todoLists)) return false;
+        $sql = 'DELETE FROM todolist WHERE id=:id';
+        $stmt = $this->dbh->prepare($sql);
+        $stmt->execute([':id' => $id]);
 
-        $removedTodo = array_splice($this->todoLists, $number-1, 1);
-
-        return count($removedTodo) > 0 ? true : false;
+        return $stmt->rowCount();
     }
 }
