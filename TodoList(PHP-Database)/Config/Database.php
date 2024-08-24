@@ -1,6 +1,6 @@
 <?php
 
-namespace Config;
+namespace PHPDB\Config;
 
 use PDO;
 use PDOException;

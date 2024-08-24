@@ -1,9 +1,9 @@
 <?php
 
-namespace PHPOOP\Service;
+namespace PHPDB\Service;
 
-use PHPOOP\Entity\TodoList;
-use PHPOOP\Repository\TodoListRepository;
+use PHPDB\Entity\TodoList;
+use PHPDB\Repository\TodoListRepository;
 
 interface TodoListService
 {

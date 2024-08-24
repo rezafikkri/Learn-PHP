@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPOOP\Helper;
+namespace PHPDB\Helper;
 
 class InputHelper
 {

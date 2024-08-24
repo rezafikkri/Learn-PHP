@@ -1,9 +1,9 @@
 <?php
 
-namespace PHPOOP\Repository;
+namespace PHPDB\Repository;
 
 use PDO;
-use PHPOOP\Entity\TodoList;
+use PHPDB\Entity\TodoList;
 
 interface TodoListRepository
 {

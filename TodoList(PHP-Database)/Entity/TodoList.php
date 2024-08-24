@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPOOP\Entity;
+namespace PHPDB\Entity;
 
 class TodoList
 {
