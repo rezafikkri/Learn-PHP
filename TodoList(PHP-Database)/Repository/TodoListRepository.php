@@ -7,23 +7,27 @@ use PHPDB\Entity\TodoList;
 
 interface TodoListRepository
 {
-    public function findAll(): array;
+    public function findAll(): iterable;
     public function save(TodoList $todoList): void;
     public function remove(int $number): bool;
 }
 
 class TodoListRepositoryImpl implements TodoListRepository
 {
-    private $todoLists = [];
-
     public function __construct(private PDO $dbh)
     {
         
     }
 
-    public function findAll(): array
+    public function findAll(): iterable
     {
-        return $this->todoLists;
+        $sql = 'SELECT * from todolist';
+        foreach ($this->dbh->query($sql) as $row) {
+            $todolist = new TodoList();
+            $todolist->setId($row['id']);
+            $todolist->setTodo($row['todo']);
+            yield $row['id'] => $todolist;
+        }
     }
 
     public function save(TodoList $todoList): void
