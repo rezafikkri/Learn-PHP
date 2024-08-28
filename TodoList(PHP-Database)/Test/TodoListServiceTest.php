@@ -12,7 +12,8 @@ use PHPDB\Service\TodoListServiceImpl;
 
 function testShowTodoList(): void
 {
-    $todoListRepository = new TodoListRepositoryImpl;
+    $dbh = Database::getConnection();
+    $todoListRepository = new TodoListRepositoryImpl($dbh);
     $todoListRepository->save(new TodoList('Belajar PHP Dasar'));
     $todoListRepository->save(new TodoList('Belajar PHP OOP'));
 
@@ -42,4 +43,4 @@ function testRemoveTodoList(): void
     $todoListService->removeTodoList(2);
 }
 
-testRemoveTodoList();
+testShowTodoList();
