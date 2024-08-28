@@ -1,9 +1,9 @@
 <?php
 
-namespace PHPOOP\View;
+namespace PHPDB\View;
 
-use PHPOOP\Helper\InputHelper;
-use PHPOOP\Service\TodoListService;
+use PHPDB\Helper\InputHelper;
+use PHPDB\Service\TodoListService;
 
 class TodoListView
 {
