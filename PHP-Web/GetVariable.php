@@ -1,6 +1,6 @@
 <?php
-$name = $_GET['name'] ?? '';
-$age = $_GET['age'] ?? '';
+$name = filter_input(INPUT_GET, 'name', FILTER_SANITIZE_SPECIAL_CHARS) ?? '';
+$age = filter_input(INPUT_GET, 'age', FILTER_SANITIZE_SPECIAL_CHARS) ?? '';
 $say = 'Halo, my name is ' . $name . ', i am ' . $age . ' years old.';
 ?>
 
