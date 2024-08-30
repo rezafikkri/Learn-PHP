@@ -1,4 +1,4 @@
 <?php
 
-header("Location: /PHP-Web/ServerVariable.php");
+header('Location: ServerVariable.php');
 exit;
