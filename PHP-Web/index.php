@@ -1,3 +1,3 @@
 <?php
 
-echo 'Ini adalah index.php';
+echo 'HELLO WORLD!';
