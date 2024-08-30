@@ -1,6 +1,7 @@
 <?php
-$get = htmlspecialchars($_GET['name'] ?? '');
-$say = 'Hello' . $get;
+$name = $_GET['name'] ?? '';
+$age = $_GET['age'] ?? '';
+$say = 'Halo, my name is ' . $name . ', i am ' . $age . ' years old.';
 ?>
 
 <!DOCTYPE html>
