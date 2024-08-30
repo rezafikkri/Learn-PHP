@@ -9,10 +9,12 @@
         <table>
             <tr>
                 <th>First Name</th>
+                <td>:</td>
                 <td><?= htmlspecialchars($_POST['first-name']) ?></td>
             </tr>
             <tr>
                 <th>Last Name</th>
+                <td>:</td>
                 <td><?= htmlspecialchars($_POST['last-name']) ?></td>
             </tr>
         </table>
