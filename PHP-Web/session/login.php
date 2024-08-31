@@ -7,15 +7,15 @@ if (isset($_SESSION['login']) && $_SESSION['login'] === true) {
     exit;
 }
 
-$error = "";
+$error = '';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_POST['username'] == 'reza' && $_POST['password'] == 'reza') {
         $_SESSION['login'] = true;
         $_SESSION['username'] = 'reza';
-        header("Location: member.php");
+        header('Location: member.php');
         exit;
     } else {
-        $error = "Login gagal";
+        $error = 'Login gagal';
     }
 }
 
@@ -32,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <?php if (!empty($error)) : ?>
         <h2><?= $error ?></h2>
         <?php endif ?>
+
         <h1>Login</h1>
         <form action="login.php" method="post">
             <label for="username">username</label>
