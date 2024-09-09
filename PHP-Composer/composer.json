@@ -1,13 +1,18 @@
 {
-    "name": "rezafikkri/php-composer",
-    "description": "Belajar PHP Composer",
-    "type": "project",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "rezafikkri",
-            "email": "fikkri.reza@gmail.com"
-        }
-    ],
-    "require": {}
+  "name": "rezafikkri/php-composer",
+  "description": "Belajar PHP Composer",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "rezafikkri",
+      "email": "fikkri.reza@gmail.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "RezaFikkri\\PHPComposer\\": "src/"
+    }
+  }
 }
