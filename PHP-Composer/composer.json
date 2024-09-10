@@ -18,5 +18,8 @@
     "psr-4": {
       "RezaFikkri\\PHPComposer\\": "src/"
     }
+  },
+  "scripts": {
+    "dev": "php -S localhost:8080"
   }
 }
