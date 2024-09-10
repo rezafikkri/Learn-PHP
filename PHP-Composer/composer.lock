@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c29c22a0e8ba1013e11a650f40172fe9",
+    "content-hash": "f97c484e46c5394b7780067efa51f6e8",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -156,6 +156,46 @@
                 "source": "https://github.com/php-fig/log/tree/3.0.1"
             },
             "time": "2024-08-21T13:31:24+00:00"
+        },
+        {
+            "name": "rezafikkri/belajar-composer-library",
+            "version": "v2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rezafikkri/belajar-composer-library.git",
+                "reference": "13fb8d22a5a642e2c83ee0bae55791252069b994"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rezafikkri/belajar-composer-library/zipball/13fb8d22a5a642e2c83ee0bae55791252069b994",
+                "reference": "13fb8d22a5a642e2c83ee0bae55791252069b994",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RezaFikkri\\BelajarComposerLibrary\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "rezafikkri",
+                    "email": "fikkri.reza@gmail.com"
+                }
+            ],
+            "description": "Belajar membuat library PHp dengan Composer",
+            "support": {
+                "issues": "https://github.com/rezafikkri/belajar-composer-library/issues",
+                "source": "https://github.com/rezafikkri/belajar-composer-library/tree/v2.1.1"
+            },
+            "time": "2024-09-10T03:48:48+00:00"
         }
     ],
     "packages-dev": [],
@@ -164,7 +204,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=8.3"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }
