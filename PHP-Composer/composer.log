@@ -1,0 +1,7 @@
+[2024-09-09T20:46:48.579752+07:00] Test log.WARNING: Foo [] []
+[2024-09-09T20:46:48.582113+07:00] Test log.ERROR: Bar [] []
+[2024-09-10T07:07:26.315214+07:00] Test log.WARNING: Foo [] []
+[2024-09-10T07:07:26.318036+07:00] Test log.ERROR: Bar [] []
+[2024-09-10T07:09:17.872352+07:00] Test log.INFO: Ini adalah log [] []
+[2024-09-10T07:09:17.874917+07:00] Test log.WARNING: Foo [] []
+[2024-09-10T07:09:17.875172+07:00] Test log.ERROR: Bar [] []

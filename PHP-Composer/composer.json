@@ -9,7 +9,9 @@
       "email": "fikkri.reza@gmail.com"
     }
   ],
-  "require": {},
+  "require": {
+    "monolog/monolog": "3.6.0"
+  },
   "autoload": {
     "psr-4": {
       "RezaFikkri\\PHPComposer\\": "src/"
