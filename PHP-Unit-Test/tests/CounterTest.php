@@ -2,11 +2,13 @@
 
 namespace RezaFikkri\PHPUnit;
 
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 class CounterTest extends TestCase
 {
-    public function testIncrement(): void
+    #[Test]
+    public function increment(): void
     {
         $counter = new Counter;
 
