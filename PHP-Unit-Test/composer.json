@@ -10,7 +10,7 @@
     }
   ],
   "scripts": {
-    "tests": "./vendor/bin/phpunit tests"
+    "test": "phpunit tests"
   },
   "require": {
     "php": ">=8.3"
