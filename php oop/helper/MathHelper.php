@@ -2,8 +2,15 @@
 
 namespace Helper;
 
+class TestStatic
+{
+
+}
+
 class MathHelper
 {
+    public static TestStatic $testStatic;
+
     public static string $name = "MathHelper";
 
     public static function sum(int ...$numbers): int
