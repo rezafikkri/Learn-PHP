@@ -3,28 +3,38 @@
 namespace RezaFikkri\PHPUnit;
 
 use Exception;
+use PHPUnit\Framework\Attributes\Before;
 use PHPUnit\Framework\TestCase;
 
 class PersonTest extends TestCase
 {
+    private ?Person $person;
+
+    protected function setUp(): void
+    {
+    }
+
+    #[Before()]
+    public function createPerson(): void
+    {
+        $this->person = new Person('Reza');
+    }
+
     public function testSayHello(): void
     {
-        $person = new Person('Reza');
-        $say = $person->sayHello('Adelina');
+        $say = $this->person->sayHello('Adelina');
         $this->assertEquals('Hello Adelina, my name is Reza', $say);
     }
 
     public function testSayHelloWithInvalidNameArgument(): void
     {
         $this->expectException(Exception::class);
-        $person = new Person('Reza');
-        $person->sayHello('');
+        $this->person->sayHello('');
     }
 
     public function testSayGoodBye(): void
     {
-        $person = new Person('Reza');
         $this->expectOutputString('Good bye Dea' . PHP_EOL);
-        $person->sayGoodBye('Dea');
+        $this->person->sayGoodBye('Dea');
     }
 }
