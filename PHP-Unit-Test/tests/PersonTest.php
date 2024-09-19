@@ -20,4 +20,11 @@ class PersonTest extends TestCase
         $person = new Person('Reza');
         $person->sayHello('');
     }
+
+    public function testSayGoodBye(): void
+    {
+        $person = new Person('Reza');
+        $this->expectOutputString('Good bye Dea' . PHP_EOL);
+        $person->sayGoodBye('Dea');
+    }
 }
