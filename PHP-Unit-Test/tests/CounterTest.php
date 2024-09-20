@@ -24,6 +24,14 @@ class CounterTest extends TestCase
         echo "Before" . PHP_EOL;
     }
 
+    public function testIncrement(): void
+    {
+        $this->markTestIncomplete('TODO call increment method');
+        $this->assertEquals(0, $this->counter->getCounter());// tidak akan dieksekusi, karena
+        // markTestIncomplete melakukan throw error IncompleteTestError
+        echo "Test test";
+    }
+
     #[Test]
     public function increment(): void
     {
