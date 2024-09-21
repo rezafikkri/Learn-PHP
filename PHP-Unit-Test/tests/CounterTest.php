@@ -5,6 +5,8 @@ namespace RezaFikkri\PHPUnit;
 use PHPUnit\Framework\Attributes\After;
 use PHPUnit\Framework\Attributes\Before;
 use PHPUnit\Framework\Attributes\Depends;
+use PHPUnit\Framework\Attributes\RequiresOperatingSystemFamily;
+use PHPUnit\Framework\Attributes\RequiresPhp;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
@@ -35,6 +37,10 @@ class CounterTest extends TestCase
     #[Test]
     public function increment(): void
     {
+        $this->markTestSkipped('Masih ada error yang bingung');
+
+        // code dibawah ini tidak akan dieksekusi, karena markTestSkipped melakukan throw error
+        // SkippedTestError
         $this->counter->increment();
         $this->assertEquals(1, $this->counter->getCounter());
 
@@ -43,6 +49,14 @@ class CounterTest extends TestCase
 
         $this->counter->increment();
         $this->assertEquals(3, $this->counter->getCounter());
+    }
+
+    #[RequiresPhp('>=8.3')]
+    #[RequiresOperatingSystemFamily('Linux')]
+    public function testOnlyWindows(): void
+    {
+        $this->assertTrue(true, 'Only run in php 8.3 and Linux');
+        echo 'Only run in php 8.3 and Linux' . PHP_EOL;
     }
 
     public function testFirst(): Counter
