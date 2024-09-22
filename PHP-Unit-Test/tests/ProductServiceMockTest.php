@@ -6,14 +6,14 @@ use Exception;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
-class ProductServiceTest extends TestCase
+class ProductServiceMockTest extends TestCase
 {
     private ProductRepository $repository;
     private ProductService $service;
 
     protected function setUp(): void
     {
-        $this->repository = $this->createStub(ProductRepository::class);
+        $this->repository = $this->createMock(ProductRepository::class);
         $this->service = new ProductService($this->repository);
     }
 
@@ -102,7 +102,14 @@ class ProductServiceTest extends TestCase
         $product = new Product;
         $product->setId('1');
 
-        $this->repository->method('findById')->willReturn($product);
+        $this->repository->expects($this->once())
+            ->method('delete')
+            ->with($this->identicalTo($product));
+
+        $this->repository->expects($this->once())
+            ->method('findById')
+            ->with($this->equalTo('1'))
+            ->willReturn($product);
         $this->service->delete('1');
 
         $this->assertTrue(true, 'Success delete');
@@ -111,9 +118,45 @@ class ProductServiceTest extends TestCase
     #[Test]
     public function deleteFailed(): void
     {
+        $this->repository->expects($this->never())
+            ->method('delete');
+
+        $this->repository->expects($this->once())
+            ->method('findById')
+            ->with($this->equalTo('1'));
+
         $this->expectException(Exception::class);
         $this->expectExceptionMessage('Product is not found');
 
         $this->service->delete('1');
+    }
+
+    #[Test]
+    public function mock():void
+    {
+        $product = new Product;
+        $product->setId('1');
+
+        $this->repository->expects($this->once())
+            ->method('findById')
+            ->willReturn($product);
+
+        $result = $this->repository->findById('1');
+        $this->assertSame($product, $result);
+    }
+
+    public function testEquals(): void
+    {
+        $theBiscuit = new Product;
+        $theBiscuit->setId('1');
+        $myBiscuit  = new Product;
+        $myBiscuit->setId('2');
+
+        $this->assertThat(
+            $theBiscuit,
+            $this->logicalNot(
+                $this->identicalTo($myBiscuit),
+            ),
+        );
     }
 }
