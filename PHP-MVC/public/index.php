@@ -1,9 +1,11 @@
 <?php
 
-$path = '/index';
+require_once __DIR__ . '/../vendor/autoload.php';
 
-if (isset($_SERVER['PATH_INFO'])) {
-    $path = $_SERVER['PATH_INFO'];
-}
+use RezaFikkri\MVC\App\Router;
 
-require_once "../app/View$path.php";
+Router::add('GET', '/', 'HomeController', 'index');
+Router::add('GET', '/login', 'UserController', 'login');
+Router::add('GET', '/register', 'UserController', 'register');
+
+Router::run();
