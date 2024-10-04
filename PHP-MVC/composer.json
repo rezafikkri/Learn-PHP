@@ -9,6 +9,9 @@
       "email": "fikkri.reza@gmail.com"
     }
   ],
+  "scripts": {
+    "start-dev": "php -S localhost:8000 -t public/"
+  },
   "require": {
     "php": ">=8.3"
   },
