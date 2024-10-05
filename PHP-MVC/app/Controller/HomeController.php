@@ -2,6 +2,8 @@
 
 namespace RezaFikkri\MVC\Controller;
 
+use RezaFikkri\MVC\App\View;
+
 class HomeController
 {
     public function index(): void
@@ -11,7 +13,7 @@ class HomeController
             'title' => 'Belajar PHP MVC',
             'content' => 'Selamat Belajar PHP MVC',
         ];
-        echo 'HomeController->index()';
+        View::render('Home/index', $response);
     }
 
     public function hello(): void

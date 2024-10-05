@@ -10,7 +10,7 @@
     }
   ],
   "scripts": {
-    "start-dev": "php -S localhost:8000 -t public/",
+    "dev": "php -S localhost:8000 -t public/",
     "test": "phpunit"
   },
   "require": {
