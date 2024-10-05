@@ -27,9 +27,12 @@ class Router
         $httpMethod = $_SERVER['REQUEST_METHOD'];
 
         foreach (self::$routes as $route) {
-            if ($path == $route['path'] && $httpMethod == $route['httpMethod']) {
+            $pattern = "#^$route[path]$#";
+            if (preg_match($pattern, $path, $variables) && $httpMethod == $route['httpMethod']) {
                 $controller = new $route['controller'];
-                $controller->{$route['method']}();
+                // $controller->{$route['method']}();
+                array_shift($variables);
+                call_user_func_array([$controller, $route['method']], $variables);
                 return;
             }
         }
