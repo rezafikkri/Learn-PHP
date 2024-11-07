@@ -1,0 +1,31 @@
+{
+  "name": "rezafikkri/php-mvc",
+  "description": "Belajar PHP MVC",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "rezafikkri",
+      "email": "fikkri.reza@gmail.com"
+    }
+  ],
+  "scripts": {
+    "test": "phpunit"
+  },
+  "require": {
+    "php": ">=8.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "RezaFikkri\\MVC\\": "app"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "RezaFikkri\\MVC\\": "tests"
+    }
+  }
+}
