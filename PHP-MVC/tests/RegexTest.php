@@ -16,7 +16,7 @@ class RegexTest extends TestCase
 
         $this->assertEquals(1, $result);
 
-        array_shift($variables);
-        var_dump($variables);
+        // array_shift($variables);
+        // var_dump($variables);
     }
 }

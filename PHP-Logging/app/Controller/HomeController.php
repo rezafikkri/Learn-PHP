@@ -1,8 +1,8 @@
 <?php
 
-namespace RezaFikkri\MVC\Controller;
+namespace RezaFikkri\PHPLogging\Controller;
 
-use RezaFikkri\MVC\App\View;
+use RezaFikkri\PHPLogging\App\View;
 
 class HomeController
 {
@@ -10,8 +10,8 @@ class HomeController
     {
         // model response
         $response = [
-            'title' => 'Belajar PHP MVC',
-            'content' => 'Selamat Belajar PHP MVC',
+            'title' => 'Belajar PHP PHPLogging',
+            'content' => 'Selamat Belajar PHP PHPLogging',
         ];
         View::render('Home/index', $response);
     }

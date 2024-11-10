@@ -1,6 +1,6 @@
 <?php
 
-namespace RezaFikkri\MVC\Middleware;
+namespace RezaFikkri\PHPLogging\Middleware;
 
 class AuthMiddleware implements Middleware
 {

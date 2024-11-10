@@ -21,12 +21,12 @@
   },
   "autoload": {
     "psr-4": {
-      "RezaFikkri\\MVC\\": "app"
+      "RezaFikkri\\PHPLogging\\": "app"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "RezaFikkri\\MVC\\": "tests"
+      "RezaFikkri\\PHPLogging\\": "tests"
     }
   }
 }

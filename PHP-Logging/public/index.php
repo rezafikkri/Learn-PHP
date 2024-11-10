@@ -2,9 +2,9 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use RezaFikkri\MVC\Middleware\AuthMiddleware;
-use RezaFikkri\MVC\App\Router;
-use RezaFikkri\MVC\Controller\{HomeController, ProductController};
+use RezaFikkri\PHPLogging\Middleware\AuthMiddleware;
+use RezaFikkri\PHPLogging\App\Router;
+use RezaFikkri\PHPLogging\Controller\{HomeController, ProductController};
 
 Router::add('GET', '/', HomeController::class, 'index');
 Router::add('GET', '/hello', HomeController::class, 'hello', [AuthMiddleware::class]);
