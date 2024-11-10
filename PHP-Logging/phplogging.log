@@ -1,0 +1,6 @@
+[2024-11-10T04:52:01.720292+00:00] RezaFikkri\PHPLogging\LoggingTest.INFO: Belajar PHP Logging [] []
+[2024-11-10T04:52:01.723355+00:00] RezaFikkri\PHPLogging\LoggingTest.INFO: Hello Logging [] []
+[2024-11-10T04:52:01.723788+00:00] RezaFikkri\PHPLogging\LoggingTest.INFO: Ini informasi Logging [] []
+[2024-11-10T04:57:29.125495+00:00] RezaFikkri\PHPLogging\LoggingTest.INFO: Belajar PHP Logging [] []
+[2024-11-10T04:57:29.128794+00:00] RezaFikkri\PHPLogging\LoggingTest.INFO: Hello Logging [] []
+[2024-11-10T04:57:29.129258+00:00] RezaFikkri\PHPLogging\LoggingTest.INFO: Ini informasi Logging [] []
