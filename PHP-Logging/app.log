@@ -1,0 +1,8 @@
+[2024-11-11T00:24:32.855485+00:00] RezaFikkri\PHPLogging\LevelTest.DEBUG: Debug Log [] []
+[2024-11-11T00:24:32.858079+00:00] RezaFikkri\PHPLogging\LevelTest.INFO: Info Log [] []
+[2024-11-11T00:24:32.858555+00:00] RezaFikkri\PHPLogging\LevelTest.NOTICE: Notice Log [] []
+[2024-11-11T00:24:32.858984+00:00] RezaFikkri\PHPLogging\LevelTest.WARNING: Warning Log [] []
+[2024-11-11T00:24:32.859398+00:00] RezaFikkri\PHPLogging\LevelTest.ERROR: Error Log [] []
+[2024-11-11T00:24:32.860607+00:00] RezaFikkri\PHPLogging\LevelTest.CRITICAL: Critical Log [] []
+[2024-11-11T00:24:32.861210+00:00] RezaFikkri\PHPLogging\LevelTest.ALERT: Alert Log [] []
+[2024-11-11T00:24:32.861881+00:00] RezaFikkri\PHPLogging\LevelTest.EMERGENCY: Emergency Log [] []

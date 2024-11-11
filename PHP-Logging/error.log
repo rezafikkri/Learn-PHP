@@ -1,0 +1,4 @@
+[2024-11-11T00:24:32.859398+00:00] RezaFikkri\PHPLogging\LevelTest.ERROR: Error Log [] []
+[2024-11-11T00:24:32.860607+00:00] RezaFikkri\PHPLogging\LevelTest.CRITICAL: Critical Log [] []
+[2024-11-11T00:24:32.861210+00:00] RezaFikkri\PHPLogging\LevelTest.ALERT: Alert Log [] []
+[2024-11-11T00:24:32.861881+00:00] RezaFikkri\PHPLogging\LevelTest.EMERGENCY: Emergency Log [] []
