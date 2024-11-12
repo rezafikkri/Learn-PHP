@@ -1,0 +1,3 @@
+[2024-11-12T12:47:26.389068+00:00] RezaFikkri\PHPLogging\ProcessorTest.INFO: Success Login {"username":"rezafikkri"} {"app_version":["v1.0.0"],"memory_usage":"8 MB","git":{"branch":"main","commit":"d4a9e2042e36a8a0cf9c5091c6bed4217e2f795d"}}
+[2024-11-12T12:47:26.405797+00:00] RezaFikkri\PHPLogging\ProcessorTest.INFO: Hello World [] {"app_version":["v1.0.0"],"memory_usage":"8 MB","git":{"branch":"main","commit":"d4a9e2042e36a8a0cf9c5091c6bed4217e2f795d"}}
+[2024-11-12T12:47:26.409786+00:00] RezaFikkri\PHPLogging\ProcessorTest.INFO: Test Test [] {"app_version":["v1.0.0"],"memory_usage":"8 MB","git":{"branch":"main","commit":"d4a9e2042e36a8a0cf9c5091c6bed4217e2f795d"}}
