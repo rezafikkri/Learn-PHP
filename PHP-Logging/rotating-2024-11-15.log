@@ -1,0 +1,3 @@
+[2024-11-15T00:20:12.449835+00:00] RezaFikkri\PHPLogging\RotatingFileHandlerTest.INFO: Hello World [] {"git":{"branch":"main","commit":"4a244070b599bf4fcc3f68bb973af9b6e8f96c59"}}
+[2024-11-15T00:20:12.460039+00:00] RezaFikkri\PHPLogging\RotatingFileHandlerTest.INFO: Test logging {"username":"rezafikkri"} {"git":{"branch":"main","commit":"4a244070b599bf4fcc3f68bb973af9b6e8f96c59"}}
+[2024-11-15T00:20:12.460894+00:00] RezaFikkri\PHPLogging\RotatingFileHandlerTest.INFO: Belajar PHP Logging [] {"git":{"branch":"main","commit":"4a244070b599bf4fcc3f68bb973af9b6e8f96c59"}}
