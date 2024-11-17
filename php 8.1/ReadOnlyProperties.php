@@ -12,6 +12,20 @@ class Category
 }
 
 $category = new Category("1", "Handphone");
-var_dump($category);
+echo $category->name . PHP_EOL;
 
 // $category->id = "2"; // Error
+
+class Produk
+{
+    public readonly string $name;
+
+    public function setName(string $name): void
+    {
+        $this->name = $name;
+    }
+}
+
+$produk = new Produk;
+$produk->setName('Lenovo');
+var_dump($produk);
