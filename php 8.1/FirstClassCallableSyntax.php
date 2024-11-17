@@ -1,6 +1,6 @@
 <?php
 
-namespace PHP81;
+namespace PHP81\FirstClassCallableSyntax;
 
 class Person
 {
@@ -15,11 +15,9 @@ class Person
     }
 }
 
-$person = new Person("Reza");
+$person = new Person('Reza');
+$reference = $person->saySalam(...);
+echo $reference('Adel') . PHP_EOL;
 
-$salam = $person->saySalam(...);
-
-echo $salam("Adel") . PHP_EOL;
-
-$contains = str_contains(...);
-var_dump($contains("Reza Sariful Fikri", "Sari"));
+$reference2 = strtolower(...);
+echo $reference2($reference('Adel')) . PHP_EOL;
