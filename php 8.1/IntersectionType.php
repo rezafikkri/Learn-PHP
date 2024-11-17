@@ -35,4 +35,4 @@ class Car implements HasBrand, HasName
     }
 }
 
-printBrandAndName(new Car("Mitsubitshi", "Lancer"));
+printBrandAndName(new Car("Honda", "Honda Civic"));
