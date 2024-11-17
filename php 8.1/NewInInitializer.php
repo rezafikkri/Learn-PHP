@@ -4,7 +4,7 @@ namespace PHP81;
 
 class Product
 {
-
+    public string $id;
 }
 
 class Car
@@ -15,7 +15,14 @@ class Car
     ) {
         
     }
+
+    function getCarProductId(Product $product = new Product()): string
+    {
+        $product->id = '123';
+        return $product->id;
+    }
 }
 
 $car = new Car();
-var_dump($car);
+var_dump($car->product);
+var_dump($car->getCarProductId());
