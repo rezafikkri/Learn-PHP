@@ -1,6 +1,6 @@
 <?php
 
-namespace PHP81;
+namespace PHP81\Enum;
 
 enum Gender
 {
