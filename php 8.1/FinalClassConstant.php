@@ -2,20 +2,21 @@
 
 class Foo
 {
-    final public const XX = "foo";
+    public const XX = 'foo';
+    final public const ZZ = 'foozzz';
 }
 
-const ZZ = "zz";
 class Bar extends Foo
 {
-    // public const XX = "bar"; // error
+    public const XX = 'bar';
+    // public const ZZ = 'barzzz'; // error
 
-    public function getZZ(): string
+    public function getXX(): string
     {
-        return ZZ;
+        return self::XX;
     }
 }
 
 $bar = new Bar;
 var_dump(Bar::XX);
-var_dump($bar->getZZ());
+var_dump($bar->getXX());
