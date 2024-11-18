@@ -1,0 +1,28 @@
+{
+  "name": "rezafikkri/psr",
+  "description": "Learn PSR",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "rezafikkri",
+      "email": "fikkri.reza@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": { "RezaFikkri\\PSR\\": "src/" }
+  },
+  "autoload-dev": {
+    "psr-4": { "RezaFikkri\\PSR\\": "tests/" }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.4"
+  },
+  "require": {
+    "php": "^8.3",
+    "monolog/monolog": "^3.8"
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
+}
