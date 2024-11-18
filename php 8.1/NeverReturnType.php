@@ -7,5 +7,4 @@ function stop(): never
 }
 
 var_dump(stop()); // null
-
 echo "haha" . PHP_EOL;
